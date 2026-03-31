@@ -1,14 +1,9 @@
 package br.com.pedropgaraujo.tabela_fipe.controller;
 
-import br.com.pedropgaraujo.tabela_fipe.dto.BrandCarData;
-import br.com.pedropgaraujo.tabela_fipe.dto.CarData;
-import br.com.pedropgaraujo.tabela_fipe.dto.ModelCarData;
-import br.com.pedropgaraujo.tabela_fipe.dto.YearCarData;
 import br.com.pedropgaraujo.tabela_fipe.service.APIService;
 import br.com.pedropgaraujo.tabela_fipe.service.VehicleService;
 import br.com.pedropgaraujo.tabela_fipe.util.DataConvert;
 
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class VehicleController {
@@ -28,14 +23,19 @@ public class VehicleController {
         String addres = vehicle.searchStart(scan.nextLine()) + "marcas/";
         var json = apiService.obterDados(addres);
         vehicle.returnBrandList(json);
+
         System.out.println("Digite o código da marca que gostaria de consultar:");
-        addres = vehicle.searchStart(scan.nextLine()) + "modelos/";
+        addres = vehicle.searchTypeAndBrand(addres,scan.nextLine()) + "modelos/";
         json = apiService.obterDados(addres);
-        vehicle.returnBrandList(json);
-        System.out.println("Digite o código do modelo que gostaria de consultar:");
-        addres = vehicle.searchStart(scan.nextLine()) + "anos/";
+        vehicle.returnModelList(json);
+
+        System.out.println("Digite o nome do modelo que gostaria de consultar:");
+        String model = scan.nextLine();
+        addres = vehicle.searchTypeAndBrand(addres,model) + "anos/";
         json = apiService.obterDados(addres);
-        vehicle.returnBrandList(json);
+        vehicle.returnYearList(json, model);
+
+        System.out.println("Digite o código do modelo que gostaria de consultar os valores:");
 
 
 //        System.out.println(json);
