@@ -14,7 +14,7 @@ public class APIService {
     private Scanner scan = new Scanner(System.in);
     private DataConvert converter = new DataConvert();
 
-    private final String ADDRES = "https://parallelum.com.br/fipe/api/v1";
+    private final String ADDRES = "https://parallelum.com.br/fipe/api/v1/";
 
 
     public String obterDados(String endereco) {
@@ -36,5 +36,7 @@ public class APIService {
         return json;
     }
 
-
+    public String getADDRES() {
+        return ADDRES;
+    }
 }
