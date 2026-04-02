@@ -30,13 +30,12 @@ public class VehicleController {
         vehicle.returnModelList(json);
 
         System.out.println("Digite o nome do modelo que gostaria de consultar:");
-        String model = scan.nextLine();
-        addres = vehicle.searchTypeAndBrand(addres,model) + "anos/";
-        json = apiService.obterDados(addres);
-        vehicle.returnYearList(json, model);
+        vehicle.returnModelsFiltered(json, scan.nextLine());
 
         System.out.println("Digite o código do modelo que gostaria de consultar os valores:");
-
+        addres = vehicle.searchTypeAndBrand(addres,scan.nextLine()) + "anos/";
+        json = apiService.obterDados(addres);
+        vehicle.returCarModelsYearsList(json, addres);
 
 //        System.out.println(json);
 //        var brands = dataConvert.obterLista(json, BrandCarData.class);

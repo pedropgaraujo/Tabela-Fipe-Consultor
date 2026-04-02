@@ -23,10 +23,10 @@ public class DataConvert implements IConverteDados {
 
     @Override
     public <T> List<T> obterLista(String json, Class<T> classe) {
-        CollectionType list = mapper.getTypeFactory()
+        CollectionType lista = mapper.getTypeFactory()
                 .constructCollectionType(List.class, classe);
         try {
-            return mapper.readValue(json, list);
+            return mapper.readValue(json, lista);
         } catch (JacksonException e) {
             throw new RuntimeException(e);
         }
