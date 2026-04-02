@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record CarData(@JsonAlias("Modelo") ModelCarData model,
-                      @JsonAlias("Marca") BrandCarData brand,
+public record CarData(@JsonAlias("Valor") String value,
                       @JsonAlias("AnoModelo") String year,
-                      @JsonAlias("Valor") String value) {
+                      @JsonAlias("Modelo") String name,
+                      @JsonAlias("Marca") String brand) {
 }
