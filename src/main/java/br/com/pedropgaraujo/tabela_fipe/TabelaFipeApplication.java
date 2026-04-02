@@ -17,6 +17,5 @@ public class TabelaFipeApplication implements CommandLineRunner {
         VehicleController vehicleController = new VehicleController();
         vehicleController.welcomeMessage();
         vehicleController.beginSearch();
-
     }
 }

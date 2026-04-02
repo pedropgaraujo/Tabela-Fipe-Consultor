@@ -37,30 +37,6 @@ public class VehicleController {
         json = apiService.obterDados(addres);
         vehicle.returCarModelsYearsList(json, addres);
 
-//        System.out.println(json);
-//        var brands = dataConvert.obterLista(json, BrandCarData.class);
-//        brands.stream()
-//                .sorted(Comparator.comparing(BrandCarData::code))
-//                        .forEach(System.out::println);
-//        BrandCarData brandCarData = dataConvert.obterDados(json, BrandCarData.class);
-//        System.out.println(brandCarData);
-//        vehicle.returnBrandList(addres);
-//        addres = vehicle.searchBrandModelAndYear(addres, scan.nextLine()) + "modelos/";
-//        json = apiService.obterDados(addres);
-//        ModelCarData modelCarData = dataConvert.obterDados(json, ModelCarData.class);
-//        System.out.println(modelCarData);
-//        System.out.println("Digite o código do modelo que gostaria de consultar:");
-//        addres = vehicle.searchBrandModelAndYear(addres, scan.nextLine()) + "anos/";
-//        json = apiService.obterDados(addres);
-//        YearCarData yearCarData = dataConvert.obterDados(json, YearCarData.class);
-//        System.out.println(yearCarData);
-//        System.out.println("Digite o código do ano que gostaria de consultar: ");
-//        addres = vehicle.searchBrandModelAndYear(addres, scan.nextLine());
-//        json =apiService.obterDados(addres);
-//        CarData carData = dataConvert.obterDados(json, CarData.class);
-//        System.out.println(carData);
-
-
     }
 
 
