@@ -8,4 +8,5 @@ public record CarData(@JsonAlias("Valor") String value,
                       @JsonAlias("AnoModelo") String year,
                       @JsonAlias("Modelo") String name,
                       @JsonAlias("Marca") String brand) {
+
 }

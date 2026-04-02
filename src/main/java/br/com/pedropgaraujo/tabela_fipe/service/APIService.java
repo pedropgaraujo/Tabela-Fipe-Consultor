@@ -10,6 +10,7 @@ public class APIService {
 
     private final String ADDRES = "https://parallelum.com.br/fipe/api/v1/";
 
+
     public String obterDados(String endereco) {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()

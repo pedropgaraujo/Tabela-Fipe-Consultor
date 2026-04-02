@@ -17,6 +17,7 @@ public class DataConvert implements IConverteDados {
         } catch (JacksonException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     @Override

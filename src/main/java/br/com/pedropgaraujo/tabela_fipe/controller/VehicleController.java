@@ -11,7 +11,6 @@ public class VehicleController {
     private Scanner scan = new Scanner(System.in);
     private VehicleService vehicle = new VehicleService();
     private APIService apiService = new APIService();
-    private DataConvert dataConvert = new DataConvert();
 
     public void welcomeMessage(){
         System.out.println("Bem-vindo ao sistema de busca de carros na Tabela Fipe");

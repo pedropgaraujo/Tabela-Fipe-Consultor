@@ -10,7 +10,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class VehicleService {
+public class
+VehicleService {
 
     private APIService api = new APIService();
     private DataConvert dataConvert = new DataConvert();
